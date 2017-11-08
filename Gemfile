@@ -7,7 +7,7 @@ end
 
 #My own gems
 gem "simple_form"
-
+gem "faker"
 
 # CSS
 gem 'bootstrap-sass'
