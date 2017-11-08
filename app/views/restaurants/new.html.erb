@@ -1,7 +1,27 @@
-<h1>Add a new restaurant</h1>
+<style>
+body {
+  color: black;
+  list-style: none;
+}
+ul {
+  list-style: none;
+}
+h1 {
+  color: purple;
+}
+
+</style>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-6">
+      <h1>Add a new restaurant</h1>
 
 
-<%= render 'form' %>
+      <%= render 'form' %>
 
 
-<p>Find me in app/views/restaurants/new.html.erb</p>
+      <%= link_to "Back to all restaurants", restaurants_path, class: "btn btn-danger" %>
+    </div>
+  </div>
+</div>

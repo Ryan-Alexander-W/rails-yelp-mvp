@@ -1,30 +1,54 @@
-<h1> <%= @restaurant.name %> </h1>
+<style>
+        body {
+          color: black;
+          list-style: none;
+        }
+        ul {
+          list-style: none;
+        }
+        h1 {
+          color: purple;
+        }
+
+      </style>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-6">
 
 
 
-<ul>
-  <li><strong>Address</strong> <%= @restaurant.address %></li>
-  <li><strong>Phone Number</strong> <%= @restaurant.phone_number %></li>
-  <li><strong>Category</strong> <%= @restaurant.category %></li>
-</ul>
+      <h1> <%= @restaurant.name %> </h1>
+
+
+
+      <ul>
+        <li><strong>Address</strong> <%= @restaurant.address %></li>
+        <li><strong>Phone Number</strong> <%= @restaurant.phone_number %></li>
+        <li><strong>Category</strong> <%= @restaurant.category %></li>
+      </ul>
 
 
 
 
-<%= link_to "Back to all restaurants", restaurants_path %>
+      <%= link_to "Back to all restaurants", restaurants_path, class: "btn btn-danger" %>
 
 
-<li>
-  <%= link_to 'Post a review', new_restaurant_review_path(@restaurant) , class: "btn btn-primary" %>
-</li>
+      <%= link_to 'Post a review', new_restaurant_review_path(@restaurant) , class: "btn btn-primary" %>
 
-<ul>
-  <% @reviews.each do |review| %>
-  <li> <strong>
-  </strong>
-   <%= review.content %>
-  <%= review.rating %>
-</li>
 
-<% end %>
-</ul>
+      <ul>
+        <% @reviews.each do |review| %>
+        <li> <strong>
+        </strong>
+        <%= review.content %>
+        <%= review.rating %>
+      </li>
+
+      <% end %>
+    </ul>
+
+  </div>
+</div>
+</div>

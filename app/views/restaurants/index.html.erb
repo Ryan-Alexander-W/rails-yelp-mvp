@@ -1,25 +1,46 @@
+<style>
+        body {
+          color: black;
+          list-style: none;
+        }
+        ul {
+          list-style: none;
+        }
+        h1 {
+          color: purple;
+        }
 
-<h1>Restaurants</h1>
-
-
-<ul>
-  <% @restaurants.each do |restaurant| %>
-  <li> <strong>
-    <%= link_to restaurant.name, restaurant_path(restaurant) %>
-  </strong>
-  <%= restaurant.address %>
-  <%= restaurant.phone_number %>
-  <%= restaurant.category %>
-</li>
-
-<% end %>
-</ul>
-
-<li>
-  <%= link_to 'Create a new restaurant', new_restaurant_path, class: "btn btn-primary" %>
-</li>
+      </style>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-6">
 
 
 
-<p>Find me in app/views/restaurants/index.html.erb</p>
+
+      <h1>Restaurants</h1>
+
+
+      <ul>
+        <% @restaurants.each do |restaurant| %>
+        <li> <strong>
+          <%= link_to restaurant.name, restaurant_path(restaurant) %>
+        </strong>
+        <%= restaurant.address %>
+        <%= restaurant.phone_number %>
+        <%= restaurant.category %>
+      </li>
+
+      <% end %>
+    </ul>
+
+    <li>
+      <%= link_to 'Create a new restaurant', new_restaurant_path, class: "btn btn-primary" %>
+    </li>
+  </div>
+</div>
+</div>
+
+
+
 
